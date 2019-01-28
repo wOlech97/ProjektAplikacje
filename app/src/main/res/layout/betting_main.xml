@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/casino_table">
+    <TextView
+        android:id="@+id/betTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:text="Ilość Kasy:pln3000"/>
+    <TextView
+        android:id="@+id/cashTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@android:color/white"
+        android:text="Zakład:pln0"
+        android:layout_above="@+id/one"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp" />
+    <ImageButton
+        android:id="@+id/one"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/chip_one"
+        android:onClick="plusOne"
+        android:layout_alignTop="@+id/five"
+        android:layout_toLeftOf="@+id/five"
+        android:layout_toStartOf="@+id/five" />
+    <ImageButton
+        android:id="@+id/five"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/chip_five"
+        android:onClick="plusFive"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:id="@+id/twenty_five"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/chip_twenty_five"
+        android:onClick="plusTwentyFive"
+        android:layout_alignTop="@+id/five"
+        android:layout_toRightOf="@+id/five"
+        android:layout_toEndOf="@+id/five" />
+
+    <ImageButton
+        android:id="@+id/fifty"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/one"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:layout_toStartOf="@+id/five"
+        android:layout_toLeftOf="@+id/five"
+        android:background="@drawable/chip_fifty"
+        android:onClick="plusFifty" />
+
+    <ImageButton
+        android:id="@+id/hundred"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/five"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/five"
+        android:layout_toRightOf="@+id/five"
+        android:background="@drawable/chip_hundred"
+        android:onClick="plusHundred" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/deal"
+        android:layout_alignStart="@+id/deal"
+        android:layout_alignLeft="@+id/deal"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="59dp"
+        android:alpha="0.6"
+        android:background="#000033"
+        android:onClick="clearBet"
+        android:text="Wyczyść"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/deal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="#000033"
+        android:alpha="0.6"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:text="Obstaw"
+        android:layout_below="@+id/fifty"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.blackjack.MainActivityFragment"
+    tools:showIn="@layout/activity_main"
+    android:background="@drawable/casino_table">
+    <!-- tools:showIn allows you to render layout_A in layout_B-->
+    <com.example.user.blackjack.Panel
+        android:id="@+id/surfaceView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.example.user.blackjack.Panel>
+    <!-- ???-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.70">
+
+        <TextView
+            android:id="@+id/playerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/cash"
+            android:layout_gravity="right|bottom"></TextView>
+
+        <TextView
+            android:id="@+id/dealerScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|top"></TextView>
+
+        <TextView
+            android:id="@+id/cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="right|bottom"
+            android:layout_toLeftOf="@id/dealerScore"></TextView>
+
+        <TextView
+            android:id="@+id/bet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/playerScore"></TextView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toEndOf="@+id/button2"
+            android:layout_toRightOf="@+id/button2"
+            android:alpha="0.6"
+            android:background="#000033"
+            android:onClick="clickMethodHit"
+            android:text="Bierz"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"></Button>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginBottom="0dp"
+            android:layout_toStartOf="@+id/button3"
+            android:layout_toLeftOf="@+id/button3"
+            android:alpha="0.6"
+            android:background="#000033"
+            android:onClick="clickMethodStand"
+            android:text="Stop"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"></Button>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:alpha="0.6"
+            android:background="#000033"
+            android:onClick="clickMethodRedeal"
+            android:text="Redeal"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"></Button>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:alpha="0.6"
+            android:background="#000033"
+            android:onClick="clickMethodDouble"
+            android:text="podwój"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"></Button>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
